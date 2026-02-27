@@ -1,9 +1,6 @@
-
-
-        
-        [data-theme="dark"] {
-            --bg-color: #1a1a1a;
-            --text-color: #f0f0f0;
+  [data-theme="dark"] {
+       --bg-color: #1a1a1a;
+             --text-color: #f0f0f0;
             --btn-bg: #f0f0f0;
             --btn-text: #1a1a1a;
         }

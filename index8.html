@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style8.css">
+    <title>Document</title>
+</head>
+<body>
+
+<div class="title">
+    <h1>To Do List</h1>
+    
+    <div class="input-group">
+        <input type="text" id="todoInput">
+        <button class="add-btn" onclick="addTask()">Add</button>
+    </div>
+
+
+    <div class="filters">
+        <button onclick="filter1('all')" id="filter-all" class="all-filter">All</button>
+        <button onclick="filter2('active')" id="filter-active">Active</button>
+        <button onclick="filter3('completed')" id="filter-completed">Completed</button>
+    </div>
+
+    <button class="clear-btn" onclick="clearCompleted()">Clear Completed</button>
+</div>
+
+
+
+    <script src="./scrypt8.js"></script>
+</body>
+</html>
