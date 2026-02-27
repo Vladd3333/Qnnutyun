@@ -1,4 +1,6 @@
-      function text() {
-            const inputVal = document.getElementById('input').value;
-            document.getElementById('title').innerText = inputVal;
-        }
+        let count = 0;
+        const button = document.getElementById('button');
+        button.addEventListener('click', function() {
+            count++;
+            button.textContent = "Դուք սեղմել եք " + count + " անգամ";
+        });
