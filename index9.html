@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style9.css">
+    <title>Arajadranq 9</title>
+</head>
+<body>
+     <div id="conteniar" class="conteniar">
+     <div id="login" class="title1">
+         <h1 class="login">Մուտք անձնական էջ</h1>
+    
+         <form class="formLogin" >
+            <label for="email" class="labelemail">Email:</label><br>
+            <input type="email" id="email" placeholder="Email" required class="inputemail"><br>
+            <label for="password" class="labelpassword">Password:</label><br>
+            <input type="password" id="password" placeholder="Password" required class="inputpassword">
+            <button onclick="login( event)" class="SubmitLogin">Login</button>
+            </form>
+         <p class="regLogin">New here? <a href="#" onclick="newFunction()" >Registrar</a></p>
+     </div>
+      <div id="registrar" style="display: none;" class="title1">
+        <h1 class="register">Registrar</h1>
+        <p class="sign">Մուտք գործեք ձեր անձնական էջ</p>
+        <form  class="formPassword">
+            <label for="username" class="labelname">Username:</label><br>
+            <input type="text" id="username" placeholder="username" required class="input">
+            <label for="email" class="labelname">Email:</label><br>
+            <input type="email" id="regemail" placeholder="Email" required class="input"><br>
+            <label for="password" class="labelname">Password:</label><br>
+            <input type="password" id="regpassword" placeholder="Password" required class="input">
+            <button onclick="registrar( event)" class="RegisterPaaword">Registrar</button>
+            </form>
+         <p class="regPassword">New here? <a href="#" onclick="newFunction()">Login</a></p>
+     </div>
+     </div>
+     <div id="dashtbords" style="display: none;">
+
+        <div class="body1">
+            <div class="flex1">
+            <select id="language" class="language">
+                <option value="EN">Eng</option>
+                <option value="Arm">Հայ</option>
+                <option value="Rus">Рус</option>
+           </select>
+            </div>
+        </div>
+        <div class="flex3">
+        <div class="body2">
+            <img src="./images/img1.jpg" alt="logo" class="logo">
+            <div class="grid">
+            <button class="students" onclick="students()">Ուսանողներ</button>
+            <button class="teachers">Դասախոսներ</button>
+            <button class="grads">Գնահատականներ</button>
+            </div>
+        </div>
+           <div class="flex2">
+            <h1 class="student">Students Page</h1>
+            <button class="add" onclick="add()" id="newadd">Ավելացնել</button>
+            <div id="table3" class="body3">
+                <table id="mainTable" class="table1" border="2">
+            <thead>
+                <tr class="tr">
+                    <th>ID</th>
+                    <th>Անուն</th>
+                    <th>Ազգանուն</th>
+                    <th>Կուրս</th>
+                    <th>Գործողություն</th>
+                </tr>
+            </thead>
+            <tbody id="studentsBody" class="tbody">  
+         </tbody>
+
+        </table>
+       </div>
+     </div>
+        <div id="modal" style=" position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);">
+    <div class="body4">
+        <h3 class="new">Ավելացնել նոր ուսանող</h3>
+        <div class="grid">
+        <input type="number" id="userIdadd" placeholder="ID" class="input"><br>
+        <input type="text" id="firstNameadd" placeholder="First Name" class="input"><br>
+        <input type="text" id="lastNameadd" placeholder="Last Name" class="input"><br>
+        <input type="number" id="courseadd" placeholder="Course" class="input"><br>
+        </div>
+        <button id="save" class="save" onclick="saveData()">Պահպանել</button>
+        <button onclick="closeModal()" class="cancel">Չեղարկել</button>
+    </div>
+</div>
+
+<div id="editModal" style="display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);">
+    <div class="body5">
+        <h3 class="new">Edit Students</h3>
+        <div class="grid1">
+        <input type="hidden" id="editStudentIndex">
+        <label class="label">ID:</label><br>
+        <input type="number" id="editId" class="input"><br>
+        <label class="label">Անուն:</label><br>
+        <input type="text" id="editFirstName" class="input"><br>
+        <label class="label">Ազգանուն:</label><br>
+        <input type="text" id="editLastName" class="input"><br>
+        <label class="label">Կուրս:</label><br>
+        <input type="number" id="editCourse" class="input"><br>
+        </div>
+        <button onclick="updateStudent()" class="update" >Update Data</button>
+        <button onclick="closeEditModal()"  class="cancel1">Չեղարկել</button>
+    </div>
+</div>
+
+<div id="deleteModal" style="display: none; position: fixed; z-index: 2; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6);">
+    <div class="body6">
+        <p class="text">Վստա՞հ եք, որ ցանկանում եք ջնջել տվյալները:</p>
+        <input type="hidden" id="studentIdToDelete">
+        <div class="body7">
+            <button onclick="confirmDelete()" class="delete">Ջնջել</button>
+            <button onclick="closeDeleteModal()" class="cancel2">Չեղարկել</button>
+        </div>
+    </div>
+</div>
+            </div>
+     </div>
+
+
+
+
+    <script src="./scrypt9.js"></script>
+</body>
+</html>
